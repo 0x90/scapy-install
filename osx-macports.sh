@@ -21,7 +21,8 @@ port selfupdate && port upgrade outdated
 
 # TODO: May be install libdnet from repository?
 echo "Installing dependencies.."
-port install libdnet py27-libdnet py-readline py-gnuplot py-crypto py-pyx swig gnuplot graphviz
+port install libdnet py-pip py27-libdnet py-readline py-gnuplot py-crypto py-pyx swig gnuplot graphviz
+port select --set pip pip27
 
 echo "Installing patched version of pylibpcap"
 pip install -e "git+https://github.com/0x90/pylibpcap-osx#egg=pylibpcap-osx"
